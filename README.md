@@ -1,6 +1,6 @@
 # Skincare Website
 ## 🚀 Live Demo
-🔗 https://your-live-link.netlify.app
+🔗 https://skincare-projects.netlify.app/
 
 ## 🛠️ Technologies Used
 
