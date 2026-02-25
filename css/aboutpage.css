@@ -1,0 +1,307 @@
+/* loader start */
+  /* Fullscreen Overlay */
+  #loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Bouncing Dots Loader */
+.dots-loader {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #ff5733; /* Custom color */
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0.8); opacity: 0.3; }
+    40% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Hide loader after timer ends */
+body.loaded #loader-overlay {
+    display: none;
+}
+/* loader End */
+
+body {
+    font-family: "Roboto", serif;
+}
+
+
+/* Navbar start */
+.top-navbar {
+    background-color: #005c99; /* Dark Blue */
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.top-navbar i {
+    margin-right: 5px;
+}
+.top-navbar a {
+    transition: 0.3s;
+}
+.top-navbar a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+/* Top Navbar end */
+
+/* Main Navbar Start */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+.navbar {
+    padding: 15px 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd; /* Bordered effect */
+    position: relative;
+}
+
+/* Magic Line (Underlining Effect) */
+.navbar-nav {
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #005c99 !important; /* Custom color for links */
+    font-weight: 500;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px; /* Added padding for bottom */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Magic Line */
+.navbar-nav .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #005c99;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover Effect: Magic Line grows */
+.navbar-nav .nav-item:hover .nav-link:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link: Magic Line stays active */
+.navbar-light .navbar-nav .nav-link.active:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link */
+.navbar-light .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #005c99; /* Active background color */
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+/* Appointment Button Styles */
+.appointment-btn {
+    background-color: #005c99;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.appointment-btn:hover {
+    background-color: #004080; /* Darker shade of #005c99 for hover */
+    transform: scale(1.05);
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .appointment-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* Main Navbar end */
+
+
+
+
+/* About Banner start */
+    .about-banner {
+        background: url('../assets/breadcrumb-bg-340.jpg') no-repeat center center/cover;
+        height: 230px; /* Adjust height as needed */
+        position: relative;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .breadcrumb-text a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .breadcrumb-text a:hover {
+        text-decoration: underline;
+    }
+/* About Banner end */
+
+/* Journey Start */
+.JourneyTitle{
+    color:#0077b6 ;
+}
+/* Journey End */
+
+/* Team Section start  */
+
+.team-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.team-section h6 {
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.team-section h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Doctor Profile Card */
+.doctor-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.doctor-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: border 0.4s ease-in-out; 
+    object-fit: cover;
+}
+  /* Hover effect - border appears */
+  .doctor-card img:hover {
+    border: 6px solid #0077b6; /* Blue border on hover */
+}
+
+.doctor-card h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.doctor-card p {
+    color: #0077b6;
+    font-size: 15px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0077b6;
+}
+
+/* Team Section end  */
+/* Footer part start */
+ .footer {
+            background-color: #005c99;
+            color: white;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+            color: #ff5733;
+        }
+        .footer .logo {
+            font-size: 26px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .footer .logo:hover {
+            transform: scale(1.1);
+            color: #ff5733;
+        }
+        .footer input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            outline: none;
+            transition: border-bottom 0.3s ease-in-out;
+        }
+        .footer input:focus {
+            border-bottom: 1px solid #ff5733;
+        }
+        .footer .social-icons i {
+            font-size: 24px;
+            margin-right: 15px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .footer .social-icons i:hover {
+            transform: scale(1.2);
+            color: #ff5733;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+/* Footer part end */

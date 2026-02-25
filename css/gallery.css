@@ -1,0 +1,326 @@
+/* loader start */
+  /* Fullscreen Overlay */
+  #loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Bouncing Dots Loader */
+.dots-loader {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #ff5733; /* Custom color */
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0.8); opacity: 0.3; }
+    40% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Hide loader after timer ends */
+body.loaded #loader-overlay {
+    display: none;
+}
+/* loader End */
+
+body {
+    font-family: "Roboto", serif;
+}
+
+/* Navbar start */
+.top-navbar {
+    background-color: #005c99; /* Dark Blue */
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.top-navbar i {
+    margin-right: 5px;
+}
+.top-navbar a {
+    transition: 0.3s;
+}
+.top-navbar a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+/* Top Navbar end */
+
+/* Main Navbar Start */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+.navbar {
+    padding: 15px 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd; /* Bordered effect */
+    position: relative;
+}
+
+/* Magic Line (Underlining Effect) */
+.navbar-nav {
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #005c99 !important; /* Custom color for links */
+    font-weight: 500;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px; /* Added padding for bottom */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Magic Line */
+.navbar-nav .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #005c99;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover Effect: Magic Line grows */
+.navbar-nav .nav-item:hover .nav-link:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link: Magic Line stays active */
+.navbar-light .navbar-nav .nav-link.active:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link */
+.navbar-light .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #005c99; /* Active background color */
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+/* Appointment Button Styles */
+.appointment-btn {
+    background-color: #005c99;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.appointment-btn:hover {
+    background-color: #004080; /* Darker shade of #005c99 for hover */
+    transform: scale(1.05);
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .appointment-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* Main Navbar end */
+
+/* Gallery Us Banner start */
+    .Gallery-banner {
+        background: url('../assets/breadcrumb-bg-340.jpg') no-repeat center center/cover;
+        height: 230px; /* Adjust height as needed */
+        position: relative;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .breadcrumb-text a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .breadcrumb-text a:hover {
+        text-decoration: underline;
+    }
+/* Gallery Us Banner end */
+
+
+/* Gallery Section start */
+
+
+.gallery-section {
+    padding: 60px 0;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    margin-bottom: 25px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    margin-bottom: 20px;
+}
+
+.img-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-container img {
+    width: 100%;
+    height: 250px; /* Fixed Height */
+    object-fit: cover; /* Ensures images don’t stretch */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 12px;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+
+    .img-container img {
+        height: 200px; /* Slightly smaller on mobile */
+    }
+}
+
+/* Gallery Section start */
+
+/* Footer part start */
+ .footer {
+            background-color: #005c99;
+            color: white;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+            color: #ff5733;
+        }
+        .footer .logo {
+            font-size: 26px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .footer .logo:hover {
+            transform: scale(1.1);
+            color: #ff5733;
+        }
+        .footer input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            outline: none;
+            transition: border-bottom 0.3s ease-in-out;
+        }
+        .footer input:focus {
+            border-bottom: 1px solid #ff5733;
+        }
+        .footer .social-icons i {
+            font-size: 24px;
+            margin-right: 15px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .footer .social-icons i:hover {
+            transform: scale(1.2);
+            color: #ff5733;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+/* Footer part end */

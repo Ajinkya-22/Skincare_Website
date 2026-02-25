@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about page</title>
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome Cdn -->
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Jquery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="../css/aboutpage.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+      <!-- JavaScript -->
+      <script src="../js/Main.js"></script>
+</head>
+
+<body>
+        <!-- loader start -->
+    <!-- Loader Overlay -->
+    <div id="loader-overlay">
+        <div class="dots-loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <!-- loader End -->
+     
+<!-- Top Navbar -->
+<div class="container-fluid top-navbar d-none d-md-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-md-8 d-flex flex-wrap align-items-center gap-2">
+                    <span>
+                        <a href="tel:167712444227" style="text-decoration: none; color: inherit;">
+                            <i class=""></i> Emergency No
+                        </a>
+                    </span>
+                    <span>
+                        <a href="tel:167712444227" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-phone"></i> 08460205770
+                        </a>
+                    </span> |
+                    <span>
+                        <a href="https://www.google.com/maps?q=Dr.+Shinde's+Skin,+Hair+%26+Laser+Clinic" target="_blank"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-map-marker-alt"></i> Los Angeles Gournadi, 1230 Baria Isl
+                        </a>
+                    </span> |
+                    <span>
+                        <i class="fas fa-clock"></i> Mon to Sat 9:00am to 06:00pm
+                    </span>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="col-md-4 d-flex justify-content-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- Top Navbar End -->
+<!-- Main Navbar -->
+<div class="container-fluid sticky-top">
+    <div class="row ">
+        <div class="col-12 p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm ">
+                <div class="container">
+                    <a class="navbar-brand fw-bold" href="#">
+                        <img src="../assets/main-logo.png" class="img-fluid" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" id="homeLink">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../page/about.html" id="aboutLink">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../page/Services.html" id="servicesLink">SERVICES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../page/gallery.html" id="galleryLink">GALLERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../page/contactus.html" id="contactLink">CONTACT</a>
+                            </li>
+                        </ul>
+                        <button class="appointment-btn btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">APPOINTMENT</button>
+                    </div>
+                </div>
+            </nav>           
+        </div>
+    </div>
+</div>
+<script src="./js/Main.js"></script>
+<!-- Main Navbar End -->
+
+    
+
+    
+    <!-- Modal start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Hospital Appointment Booking</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form class="p-4 border rounded shadow bg-light">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Appointment Date</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="department" class="form-label">Department</label>
+                                <select class="form-select" id="department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="General">General Medicine</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Notes</label>
+                                <textarea class="form-control" id="message" rows="3"
+                                    placeholder="Enter any additional details"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <!-- About Banner start -->
+    <section class="about-banner position-relative d-flex align-items-center justify-content-center text-center">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="fw-bold text-white">ABOUT US</h1>
+            <p class="breadcrumb-text">
+                <a href="../index.html" class="text-white">Home</a> <span class="text-primary"> • About</span>
+            </p>
+        </div>
+    </section>
+    <!-- About Banner End -->
+
+
+    <!-- Journey Start  -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left Column (Text Content) -->
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                <h2 class="fw-bold JourneyTitle">Our Journey</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque nam, nisi ut veniam, pariatur
+                    aut non quod itaque optio autem, exercitationem quia? Eos architecto deserunt, distinctio ut
+                    recusandae vel.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque nam, nisi ut veniam, pariatur
+                    aut non quod itaque optio autem, exercitationem quia? Eos architecto deserunt, distinctio ut
+                    recusandae vel.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque nam, nisi ut veniam, pariatur
+                    aut non quod itaque optio autem, exercitationem quia? Eos architecto deserunt, distinctio ut
+                    recusandae vel.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque nam, nisi ut veniam, pariatur
+                    aut non quod itaque optio autem, exercitationem quia? Eos architecto deserunt, distinctio ut
+                    recusandae vel.
+                </p>
+            </div>
+
+
+            <!-- Right Column (Image Content) -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="fw-bold JourneyTitle">Our Purpose</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque nam, nisi ut veniam, pariatur
+                    aut non quod itaque optio autem, exercitationem quia? Eos architecto deserunt, distinctio ut
+                    recusandae vel.
+                </p>
+
+                <img src="../assets/journey-1.png" class="img-fluid" alt="Clinic Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                <img src="../assets/journey-2.png" class="img-fluid rounded shadow" alt="Journey Image" />
+            </div>
+
+            <!-- Text Content Column -->
+            <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="fw-bold">The <span class="fw-bold text-primary">Clear Skin</span> Promise</h2>
+                <p><i class="fas fa-clinic-medical text-success"></i> A go-to multifunctional centre for all skin
+                    ailments</p>
+                <p><i class="fas fa-user-md text-info"></i> Qualified dermatologists, with international experience</p>
+                <p><i class="fas fa-laptop-medical text-warning"></i> USA FDA approved light & laser technologies</p>
+                <p><i class="fas fa-heartbeat text-danger"></i> Minimal side effects and a quicker recovery</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Journey End  -->
+
+
+    <!-- Team Section start -->
+    <section class="team-section">
+        <h6>OUR TEAM</h6>
+        <h2>Our Expert Doctors</h2>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Doctor 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="doctor-card">
+                        <img src="../assets/team-1.jpg" alt="Doctor 1">
+                        <h4>Caroline Grant</h4>
+                        <p>Plastic Surgeon</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="doctor-card">
+                        <img src="../assets/team-2.jpg" alt="Doctor 2">
+                        <h4>Dr. Maria Angel</h4>
+                        <p>Plastic Surgeon</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="doctor-card">
+                        <img src="../assets/team-3.jpg" alt="Doctor 3">
+                        <h4>Nathan Mullins</h4>
+                        <p>Plastic Surgeon</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Team Section end -->
+
+    <!-- Footer Part Start -->
+  <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="logo">Skin Care</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   </p>
+                    <div class="social-icons mt-3">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../page/about.html">About</a></li>
+                        <li><a href="../page/Services.html">Service</a></li>
+                        <li><a href="../page/gallery.html">Gallery</a></li>
+                        <li><a href="../page/contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../page/Privacy_Policy.html">Privacy Policy</a></li>
+                        <li><a href="../page/Terms_And_Conditions.html">Terms And Conditions</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <p>102/ B Street, New Elephant Road, Sandigo, USA</p>
+                    <p><strong>E-Mail Us:</strong> example@gmail.com</p>
+                    <p><strong>Call Now:</strong> +880 123 (4567) 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Prasad Wandhekar. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Part End -->
+
+
+
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
